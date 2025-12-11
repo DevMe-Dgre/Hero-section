@@ -1,10 +1,180 @@
 * {
-  margin : 0;
+  margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
 body {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
   line-height: 1.6;
+  color: #333;
+}
+
+main {
+  padding: 1rem;
+}
+
+/* hero section starts here */
+
+
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.hero-container {
+  display: flex;
+  max-width: 1200px;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-content {
+  flex: 1;
+  min-width: 0;
+  animation: slideInLeft 0.8s ease-out;
+}
+
+h1 {
+  font-weight: 700;
+  font-size: 3rem;
+  color: white;
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
+}
+
+.hero-subtitle {
+  font-size: 1.2rem;
+  color: #fff;
+  max-width: 500px;
+  line-height: 1.7rem;
+  margin-bottom: 2rem;
+}
+
+.cta-button {
+  display: inline-block;
+  padding: 1rem 2.5rem;
+  background-color: #fff;
+  color: #667eea;
+  border-radius: 30px;
+  border: none;
+  font-weight: 600;
+  font-size: 1.05rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+
+}
+
+.cta-button:hover {
+  transform: translateY(-2px);
+}
+
+.cta-button:active {
+  transform: translateY(0);
+}
+
+
+.hero-image {
+  flex: 1;
+  min-width: 200px;
+  display: flex;
+  justify-content: center;
+  animation: slideInRight 0.8s ease-out;
+}
+
+.hero-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+}
+
+
+/*animations starts here*/
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+
+/* Responsive for tablet*/
+
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 1.5rem;
+    min-height: auto;
+    padding-top: 6rem;
+    padding-bottom: 3rem;
+  }
+
+  .hero-container {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.05rem;
+  }
+
+  .hero-image {
+    margin-top: 1rem;
+  }
+}
+
+/* mobile responsive*/
+
+@media (max-width: 460px) {
+  .hero {
+    padding: 1rem;
+    padding-top: 4rem;
+    padding-bottom: 2rem;
+  }
+
+  .hero-container {
+    gap: 1.2rem;
+  }
+
+  h1 {
+    font-size: 1.75rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .cta-button {
+    padding: 0.85rem 2rem;
+    font-size: 1rem;
+  }
 }
